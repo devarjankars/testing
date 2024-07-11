@@ -11,7 +11,7 @@ const Tab = ({ index }) => {
       onClick={() => setActiveTab(index)}
     >
       {tabs[index].title}
-      <button className="ml-2 text-red-500 h-5 w-5 hover: bg-yellow-50" onClick={(e) => { e.stopPropagation(); removeTab(index); }}>
+      <button className="ml-1 mb-0 m text-white h-5 w-5 hover: bg-red-400  rounded-r-lg" onClick={(e) => { e.stopPropagation(); removeTab(index); }}>
         x
       </button>
     </div>
