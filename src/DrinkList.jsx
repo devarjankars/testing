@@ -24,7 +24,7 @@ const DrinkList = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-slate-200">
       {tabs[activeTab].detail ? (
         <div>
           <h2 className="text-xl font-bold">Name: {tabs[activeTab].detail.strDrink}</h2>
@@ -38,13 +38,13 @@ const DrinkList = () => {
           </button>
         </div>
       ) : (
-        <div className=' flex flex-wrap'>
+        <div className=' flex flex-wrap bg-slate-300'>
           {tabs[activeTab].data?.map((drink) => (
             <div key={drink.idDrink} className="mt-2  m-3 p-4 bg-blue-100" >
               {drink.strDrink}
               <img src ={drink.strDrinkThumb} className='object-scale-down h-25 w-20' />
               <p></p>
-              <button onClick={() => handleDrinkClick(drink)} className="ml-2 p-1 bg-green-500 text-white">
+              <button onClick={() => handleDrinkClick(drink)} className="ml-2 p-1 m-1 bg-green-600 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">
                 Details
               </button>
             </div>
